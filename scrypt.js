@@ -294,4 +294,11 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 
+                                                                             // BLOG
+
+    
+
+
+
+
 })

@@ -12,13 +12,13 @@
     <div class="overlay"></div>
 
     <section id="header">
-        <a href="index.html"><img src="/images/logo/logo.png" alt=""></a>
+        <a href="#"><img src="/images/logo/logo.png" alt=""></a>
 
         <div>
             <ul id="navbar">
                 <li><a  href="index.html">Home</a></li>
-                <li><a class="active" href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a  href="shop.html">Shop</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="contact.html"><ion-icon class="bag_dekstop"  name="bag-handle-outline"></a></li>
@@ -33,11 +33,47 @@
 
     <section id="page_header">
      
-        <h2 class="h2_and_p_shop">#stayhome</h2>
+        <h2 class="h2_and_p_shop">#readmore</h2>
    
         <p class="h2_and_p_shop">Save more with coupons & up to 70% off!</p>
       
     </section>
+
+
+
+    <section id="single_product" class="section_p1">
+        <div class="single_product_container blog">
+            <div class="date_blog">
+                <h2>13 / 24</h2>
+            </div>
+            <div class="image_single_product blog">
+                <div class="big_image blog">
+                    <img id="big_image_id" src="/images/products/jacket-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="text_single_product_container_right">
+                <div class="price_size_container blog">
+                    <h3 class="title_article">Fasion Week</h3>
+                    <p class="paragraphe_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tenetur dolor rem quia earum distinctio voluptate. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod</p>
+                </div>
+
+                <div class="read_more">
+                    <h3>Conitnue raeding</h3>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
 
     <section id="feature" class="section_p1" style="display: none;">
 
@@ -45,7 +81,7 @@
 
     </section>
 
-    <section id="feature_products_product1" class="section_p1">
+    <section id="feature_products_product1" class="section_p1" style="display: none;">
         <!-- <div class="feature_products_product1_text_container">
             <h2>Featured products</h2>
             <p class="summer">summer collection modern design</p>
@@ -64,7 +100,7 @@
     </section>
 
 
-    <section id="feature_products_product1" class="section_p1 arrivals">
+    <section id="feature_products_product1" class="section_p1 arrivals" style="display: none;">
         <!-- <div class="feature_products_product1_text_container">
             <h2>New Arrivals</h2>
             <p class="summer">summer collection modern design</p>
@@ -74,7 +110,7 @@
         </div>
     </section>
 
-    <section id="feature_products_product1">
+    <section id="feature_products_product1" style="display: none;">
         <div class="scroll bottom" id="new_arrivals">
            <!-- LES CARD PRODUCTS SONT ICI -->
            
@@ -115,7 +151,7 @@
         </div>
     </section>
 
-    <section class="pagination">
+    <section class="pagination" style="display: none;">
         <div class="item_pagination">1</div>
         <div class="item_pagination">2</div>
         <div class="item_pagination">></div>
@@ -208,6 +244,58 @@
     </section>
 
 
+
+    <script>
+        const blogDatas = [
+    { date: `13 / 23`,
+     image: "images/logo/cheerful-afro-woman-holds-mobile-credit-card-bouquet-stands-against-clothes-rail.jpg", 
+     title: "Fashion Week", 
+     paragraphe: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tenetur dolor rem quia earum distinctio voluptate. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod" },
+     { date: `27 / 24`,
+     image: "images/logo/smiling-young-woman-sitting-with-laptop-credit-card.jpg", 
+     title: "New Year, New Products", 
+     paragraphe: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tenetur dolor rem quia earum distinctio voluptate. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod" },
+     { date: `05 / 24`,
+     image: "images/logo/t-shirt-hanger-shirt-shop.jpg", 
+     title: "Big Promo Vacances", 
+     paragraphe: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tenetur dolor rem quia earum distinctio voluptate. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod" },
+     { date: `14 / 24`,
+     image: "images/logo/woman-holding-credit-card-using-laptop.jpg", 
+     title: "Buy with style", 
+     paragraphe: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tenetur dolor rem quia earum distinctio voluptate. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod. Architecto commodi, inventore placeat consequatur ipsum alias illum quidem beatae nisi repellat voluptatem quod" },
+    
+
+]
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const blogContainer = document.querySelector("#single_product");
+            let blogitem = "";
+            blogDatas.forEach(blogData =>{
+                blogitem += `<div class="single_product_container blog">
+            <div class="date_blog">
+                <h2>${blogData.date}</h2>
+            </div>
+            <div class="image_single_product blog">
+                <div class="big_image blog">
+                    <img id="big_image_id" src="${blogData.image}" alt="">
+                </div>
+            </div>
+            <div class="text_single_product_container_right">
+                <div class="price_size_container blog">
+                    <h3 class="title_article">${blogData.title}</h3>
+                    <p class="paragraphe_details">${blogData.paragraphe}</p>
+                </div>
+
+                <div class="read_more">
+                    <h3>Conitnue raeding</h3>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+            </div>
+        </div>`
+            })
+
+            blogContainer.innerHTML = blogitem;
+        })
+    </script>
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
